@@ -34,7 +34,7 @@ const Home = () => {
       );
       setSearchedWeathers(prev => [...prev, res.data]);
       setCity('');
-      await axios.post('https://weatherreportproj-backend.onrender.com/cities', { name: city });
+      await axios.post('https://weatherreportproj-backend.onrender.com/api/cities', { name: city });
     } catch (error) {
       alert("City not found or network error.");
     }

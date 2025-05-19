@@ -11,7 +11,7 @@ const SearchHistory = () => {
   useEffect(() => {
     const fetchCitiesAndWeather = async () => {
       try {
-        const res = await axios.get('https://weatherreportproj-backend.onrender.com/cities');
+        const res = await axios.get('https://weatherreportproj-backend.onrender.com/api/cities');
         const cityList = res.data;
 
         const weatherPromises = cityList.map(city =>
